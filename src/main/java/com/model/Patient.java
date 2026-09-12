@@ -3,6 +3,7 @@ package com.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
@@ -11,10 +12,10 @@ import java.util.UUID;
 @Entity
 public class Patient {
     @Id
+    @GeneratedValue
     private UUID id;
     @NotNull
     String name;
-
     @NotNull
     String address;
     @NotNull
@@ -62,6 +63,13 @@ public class Patient {
 
     public void setRegisteredDate(LocalDate registeredDate) {
         this.registeredDate = registeredDate;
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 

@@ -4,6 +4,9 @@ public class PatientResponseDto {
 
     public String Id;
 
+    public String name;
+    public String address;
+    public String email;
     public String getName() {
         return name;
     }
@@ -36,7 +39,4 @@ public class PatientResponseDto {
         this.email = email;
     }
 
-    public String name;
-    public String address;
-    public String email;
 }
